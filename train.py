@@ -521,6 +521,9 @@ def main():
 
     print(f'train data lenght {len(dataset_train)}')
     print(f'eval data lenght {len(dataset_eval)}')
+    
+    print(np.unique(dataset_train.targets, return_counts=True))
+    print(np.unique(dataset_test.targets, return_counts=True))
 
     # setup mixup / cutmix
     collate_fn = None
